@@ -4,7 +4,7 @@ Theme URI: http://andreamignolo.com/zack-990/
 Description: Zack 990 is a photoblog theme inspired by The Boston Globe's 'The Big Picture' site.  In addition to large photos, Zack 990 includes a four column widget-ready footer.
 Author: A. Mignolo and Joshua Weinberg
 Author URI: http://andreamignolo.com
-Version: 1.1
+Version: 1.2
 Tags: one-column, white, blue, fixed-width, threaded-comments, photoblogging
 
 License: GNU General Public License (GPL) version 3
@@ -990,5 +990,37 @@ img { -ms-interpolation-mode:bicubic; }
 	line-height: 17px;
 	padding: 0 4px 5px;
 	margin: 0;
+}
+
+/* =Main Meta styling
+------------------------------------------------------------------*/
+.main_meta .comments, .main_meta .additional {
+  padding-top: 10px;
+}
+
+.main_meta .comments {
+  float: left;
+  display: inline;
+  width: 100px;
+  margin-right: 10px;
+}
+
+.main_meta .permalink {
+  float: right;
+  display: inline;
+}
+
+.main_meta h2 {
+  border-bottom: 1px dotted #333;
+  padding-bottom: 5px;
+}
+
+.main_meta .additional {
+  width: 850px;
+  float: right;
+  display: inline;
+  border-left: 1px dotted #333;
+  padding-left: 10px;
+}
 }
 
