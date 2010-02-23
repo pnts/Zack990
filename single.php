@@ -4,27 +4,23 @@
 	
 	<div id="single">
     <?php if (have_posts()) : ?>
-
-        <?php while (have_posts()) : the_post(); ?>
+      <?php while (have_posts()) : the_post(); ?>
                
 			<div class="main_meta">
-				<h2><?php the_title(); ?></h2>
-				</div>
+			  <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
+		    <div class="comments"><?php comments_popup_link('0', '1 Comment', '%'); ?></div>
+		    <div class="additional">
+		        <span class="date"><?php the_time('F jS, Y'); ?></span>
+		        <span class="permalink"><a href="<?php the_permalink() ?>" title="Permanent Link to <?php the_title(); ?>">Permalink</a></span>
+		        <?php the_excerpt(); ?>		
+		        <?php if(has_tag()): ?><ul class="tags"><?php the_tags('<li>Tagged ', ', ', '</li>');?></ul><?php endif; ?>
+		    </div><!-- close additional -->
+      </div><!-- close main_meta -->
 
 				<div class="post">
                 <?php the_content('&#187; Continue Reading'); ?>
 				</div>
-			<div class="main_meta">	
-				<ul>
-					<li><?php the_time('F jS, Y'); ?></li>
-					<li>Posted in <?php the_category(', ') ?></li>
-					<?php the_tags('<li>Tagged ', ', ', '</li>'); ?>
-					<li><?php edit_post_link('Edit', '', ''); ?></li>
-				</ul>
-			</div>
-				
-
-        <?php endwhile; ?>
+      <?php endwhile; ?>
 
 
     	<?php else : ?>
