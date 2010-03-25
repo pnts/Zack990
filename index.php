@@ -11,7 +11,7 @@
 		  <?php while (have_posts()) : the_post();
 				if( $post->ID == $do_not_duplicate ) continue; update_post_caches($posts); ?>
 		    
-
+        <div class="post">  
 		    <div class="main_meta">
 						<h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
 				<div class="comments"><?php comments_popup_link('0', '1 Comment', '%'); ?></div>
@@ -22,8 +22,9 @@
 				  <?php if(has_tag()): ?><ul class="tags"><?php the_tags('<li>Tagged ', ', ', '</li>');?></ul><?php endif; ?>
 				</div><!-- close additional -->
 		  </div><!-- close main_meta -->
-		  <div class="post">  
-		    <?php the_content('More Photos'); ?>
+		  <div class="content">
+		      <?php the_content('More Photos'); ?>
+		  </div>
       </div><!-- close post -->
 	    <?php endwhile; ?>
 

@@ -80,21 +80,15 @@ h1 {
 	margin: 2em auto 4em auto;
 	}
 	
-#content {
-	width: 55em;
-	float: left;
-	margin: 2em 0 3em 1.5em;
-	padding: 0 2em 0 0;
-	}
 
 .post {
-	width: 994px;
-	float: left;
-	margin: 0 1em 1em 0em;
-	padding: 0 .7em 0 0;
-	min-height: 150px;
 	overflow: hidden;
 	}
+	
+.content {
+  clear: both;
+  
+}
 	
 #single .post {
 	border-top: 0;
@@ -265,23 +259,6 @@ h1 {
 	}
 
 
-
- a.more-link {
-	text-align: center;
-	display: block;
-	padding-top: 5em;
-	width: 990px;
-	color: #333 !important;
-	background: #CCC;
-	padding: 10px 0;
-	float: left;
-	width: 994px;
-	}
-	
-.more-link:hover {
-	background: #AAA;
-}
-
 img.thumbnail {
 	float: left;
 	padding: 0 1em 0 0;
@@ -337,6 +314,32 @@ ul, ol {
 	margin-top: 5em;
 }
 
+
+/*  Caption
+------------------------------------------------------------------*/
+
+.wp-caption {
+  display: block;
+  margin: 0 auto;
+}
+
+
+.wp-caption p.wp-caption-text {
+  display: block;
+  margin: 0;
+  background: #000;
+  color: #FFF;
+  padding: 10px 0 10px 15px;
+  margin-top: -5px;
+}
+
+a.more-link {
+  display: block;
+  background: #EEE;
+  padding: 10px 15px;
+  clear: both;
+  text-align: center;
+}
 
 
 /*  Style and Colors 
@@ -677,27 +680,24 @@ strong {
 .main_meta strong {
 	color: #2F60BF;
 	}
+	
+.main_meta span.date {
+  display: block;
+  padding-bottom: 10px;
+  float: left;
+  display: inline;
+}
+
+.main_meta p {
+  clear: left;
+}
 
 .edit {
 	margin: -1em 0 .5em .3em;
 	}
 	
-.wp-caption {
-	margin-top: 1em;
-}
 
-.post p.caption, .post p.wp-caption-text {
-	font-size: 1em;
-	padding: 10px 5px 10px 15px;
-	color: #FFF;
-	text-align: left;
-	background: #000;
-	width: 974px;
-	margin-top: -5px !important;
-	min-height: 25px;
-	margin-bottom: 0;
 
-}
 
 .post p {
 	margin: 15px 0 ;
@@ -992,6 +992,12 @@ img { -ms-interpolation-mode:bicubic; }
 	margin: 0;
 }
 
+
+.comments a {
+  background: url(images/comment.png) left center no-repeat;
+  padding-left: 20px;
+}
+
 /* =Main Meta styling
 ------------------------------------------------------------------*/
 .main_meta .comments, .main_meta .additional {
@@ -1022,5 +1028,7 @@ img { -ms-interpolation-mode:bicubic; }
   border-left: 1px dotted #333;
   padding-left: 10px;
 }
-}
+
+
+
 
