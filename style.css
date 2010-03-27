@@ -95,7 +95,7 @@ h1 {
 	}
 
 #single, #home_content {
-	margin-top: 4em;
+	margin-top: 0em;
 	}
 
 #single .wp-caption-text, #single .caption {
@@ -150,10 +150,14 @@ h1 {
 	}
 	
 .archive_nav {
-	margin: 0;
+	margin: 15px 0;
 	padding: .5em 1em 1.7em 1em;
 	clear: both;
 	}
+	
+.archive_nav.gallery {
+  padding: 0;
+}
 
 .right {
 	float: right;
@@ -320,7 +324,7 @@ ul, ol {
 
 .wp-caption {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 15px auto;
 }
 
 
@@ -419,7 +423,7 @@ h3 {
 	}
 
 #main_feature img, #home_content img, .post_entry img, #content img, #single img, .wp-caption img, object {
-	border: 2px solid #000;
+	border: 5px solid #000;
 	}
 	
 object {
@@ -612,7 +616,7 @@ h2, h2 a {
 	
 #page h2 {
 	font-size: 2em;
-	margin: 1em 1em 1em 0;
+	margin: 1em 1em 0 0;
 }
 
 #single .main_meta h2 {
@@ -686,6 +690,13 @@ strong {
   padding-bottom: 10px;
   float: left;
   display: inline;
+  margin-right: 15px;
+}
+
+ul.tags {
+  margin: 0 0 0 10px;
+  padding: 0;
+  line-height: 12px;
 }
 
 .main_meta p {
