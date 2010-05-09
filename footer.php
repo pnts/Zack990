@@ -3,9 +3,9 @@
 		
 		
 		
-		
+
 		<ul id="widgetlist">
-		<div id="col1">
+	  <div id="col1">
 		<?php if ( !function_exists('dynamic_sidebar')
 			  || !dynamic_sidebar("Column 1") ) : ?>
 		
