@@ -1,4 +1,31 @@
 <?php
+
+add_shortcode('wp_caption', 'zack_img_caption_shortcode');
+add_shortcode('caption', 'zack_img_caption_shortcode');
+
+function zack_img_caption_shortcode($attr, $content = null) {
+
+  	// Allow plugins/themes to override the default caption template.
+  	$output = apply_filters('img_caption_shortcode', '', $attr, $content);
+  	if ( $output != '' )
+  		return $output;
+
+  	extract(shortcode_atts(array(
+  		'id'	=> '',
+  		'align'	=> 'alignnone',
+  		'width'	=> '',
+  		'caption' => ''
+  	), $attr));
+
+  	if ( 1 > (int) $width || empty($caption) )
+  		return $content;
+
+  	if ( $id ) $id = 'id="' . esc_attr($id) . '" ';
+
+  	return '<div ' . $id . 'class="wp-caption ' . esc_attr($align) . '" style="width: ' . (4 + (int) $width) . 'px">'
+  	. do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
+}
+
 if ( function_exists('register_sidebar') )
 	register_sidebar(array(
 	'name' => 'Column 1',
@@ -45,5 +72,9 @@ function legacy_comments( $file ) {
 	if ( !function_exists('wp_list_comments') )
 		$file = TEMPLATEPATH . '/legacy.comments.php';
 	return $file;
+	
+ 
+
+
 	
 }?>
