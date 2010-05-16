@@ -1,5 +1,7 @@
 <?php
 
+$GLOBALS['content_width'] = 990;
+
 add_shortcode('wp_caption', 'zack_img_caption_shortcode');
 add_shortcode('caption', 'zack_img_caption_shortcode');
 

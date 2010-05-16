@@ -87,6 +87,7 @@ h1 {
 	
 .content {
   clear: both;
+  overflow: hidden;
   
 }
 	

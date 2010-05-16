@@ -24,7 +24,7 @@
 
 	<ul class="commentlist">
 	<?php wp_list_comments(); ?>
-	</ol>
+	</ul>
 
 	<div class="navigation">
 		<div class="alignleft"><?php previous_comments_link() ?></div> 
