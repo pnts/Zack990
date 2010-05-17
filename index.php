@@ -45,6 +45,7 @@
 		  
 		    <div class="content">
 		      <?php the_content('More Photos'); ?>
+		      <?php wp_link_pages('before=<div class="page-links">&after=</div>'); ?> 
 		    </div>
       </div><!-- close post -->
 	    <?php endwhile; ?>
